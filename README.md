@@ -44,7 +44,7 @@ An analysis of a web-based challenge masquerading as a simple HTML countdown pag
   * Recognizing **Polyglot Files**: Deducing that the referenced `flare-on.png` is not merely an image, but a disguised PHP script intended for server-side execution.
 * **Key Takeaway:** Threat actors frequently hide malicious code inside seemingly benign static assets (like PNGs) and rely on intentional includes or server misconfigurations to execute them.
 
-### [Challenge 3: Such Evil (Native C++) - View Write-up](.Flare-On%201/Challenge%203)
+### [Challenge 3: Such Evil (Native C++) - View Write-up](./Flare-On%201/Challenge%203)
 An analysis of a native Windows executable that utilizes dynamic code generation to hide its true intent.
 * **Techniques Demonstrated:**
   * Identifying **Stack Strings** and **Shellcode Execution** built at runtime.
@@ -52,7 +52,7 @@ An analysis of a native Windows executable that utilizes dynamic code generation
   * Locating and stepping through a live XOR decryption loop in memory (`XOR BYTE PTR DS:[ESI], 66`) to catch the payload before execution.
 * **Key Takeaway:** Static analysis tools are blind to code that does not exist until runtime; deploying a debugger to let the malware unpack itself is essential.
 
-### [Challenge 4: APT9001 (Malicious PDF & Shellcode) - View Write-up](.Flare-On%201/Challenge%204)
+### [Challenge 4: APT9001 (Malicious PDF & Shellcode) - View Write-up](./Flare-On%201/Challenge%204)
 A complex challenge mimicking an Advanced Persistent Threat (APT) spear-phishing document containing heavily obfuscated JavaScript and fragile shellcode.
 * **Techniques Demonstrated:**
   * Performing PDF triage using `pdfid` to locate `/OpenAction` and `/JS` execution triggers.
