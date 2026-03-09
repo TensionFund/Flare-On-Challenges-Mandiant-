@@ -1,5 +1,4 @@
 # Flare-On Reverse Engineering Portfolio
-# Flare-On Reverse Engineering Portfolio
 
 [![Category: Malware Analysis](https://img.shields.io/badge/Category-Malware%20Analysis-red.svg)](#)
 [![Difficulty: Advanced](https://img.shields.io/badge/Difficulty-Advanced-orange.svg)](#)
@@ -59,7 +58,10 @@ A complex challenge mimicking an Advanced Persistent Threat (APT) spear-phishing
   * Bypassing intentionally mangled PDF filters (which break standard tools like `pdf-parser`) by writing custom Python scripts to perform raw Zlib decompression and ASCII-Hex decoding.
   * Identifying **Heap Spray** mechanics and extracting Little-Endian x86 shellcode from Unicode (`%u`) strings.
   * Dealing with **Environmental Fragility**: Diagnosing why shellcode decrypts garbage data when run outside its native environment (stack pointer misalignment).
-  * Defeating **Stack Strings**: Writing custom scripts to statically bypass fragmented `PUSH` instructions and brute-force a 4-byte XOR key (`BEEF`) directly against the binary.
+  * Defeating **Self-Modifying Code**: Manually parsing the shellcode's 
+    decryption routine, which used per-block XOR keys embedded in 
+    `XOR DWORD PTR [EDX+offset]` instructions to decrypt PUSH operands 
+    that built the flag string on the stack in reverse (LIFO) order.
 * **Key Takeaway:** Automated tools and dynamic execution often fail against highly tailored exploits. A deep understanding of data structures, raw byte manipulation, and stack mechanics is required to manually extract and decrypt the payload.
 
 ---
@@ -72,4 +74,10 @@ I approach malware analysis not as a puzzle to guess, but as an engineered syste
 4. **Algorithmic Reversal:** Locating the core decryption loops (`XOR`/`INC`/`DEC`) in assembly, extracting the keys directly from CPU registers, and applying them natively to recover the underlying logic.
 
 ---
-*If you are a recruiter or hiring manager looking for an engineer who understands both low-level telecommunications and advanced malware analysis, please feel free to reach out via my linked contact information.*
+## 📫 Contact
+
+- **LinkedIn:** [www.linkedin.com/in/zain-bin-hasan]
+- **Email:** [szainbh@gmail.com]
+- **Location:** United Kingdom
+- **Status:** Actively seeking roles in Malware Analysis, 
+  Threat Intelligence, Detection Engineering, and SOC Analysis.
